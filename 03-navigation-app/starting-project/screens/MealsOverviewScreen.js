@@ -4,7 +4,10 @@ import { Text, View } from 'react-native-web'
 import { StyleSheet } from 'react-native'
 
 
-function MealsOverviewScreen() {
+function MealsOverviewScreen({ route }) {
+
+  route.params
+
   return (
     <View style={styles.container}>
         <Text>
