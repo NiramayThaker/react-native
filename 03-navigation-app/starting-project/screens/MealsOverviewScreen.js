@@ -6,12 +6,16 @@ import { StyleSheet } from 'react-native'
 
 function MealsOverviewScreen({ route }) {
 
-  route.params
+  const catId = route.params.catrgoryId;
+
+  const displayedMeals = MEALS.filter((mealItem) => {
+    return mealItem.categoryIds.indexOf(catId) >= 0;
+  });
 
   return (
     <View style={styles.container}>
         <Text>
-            Meal Overview Screen
+            Meal Overview Screen - {displayedMeals}
         </Text>
     </View>
   )
